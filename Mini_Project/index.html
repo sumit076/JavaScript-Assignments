@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Stopwatch/Timer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="assets/stopwatch.css">
+</head>
+<body>
+  <div class="btn-group">
+    <button onclick="display_stopwatch()">STOPWATCH</button>
+    <button onclick="display_timer()">TIMER</button>
+  </div>
+  <div class="container_timer" id="cont_timer">
+    <div class="time" id="timer_set">
+      <select id="hours"></select><p style="color:aqua;padding-right:10px;font-size:12px">hrs</p>
+      <select id="minutes"></select><p style="color:aqua;padding-right:10px;font-size:12px">min</p>
+      <select id="seconds"></select><p style="color:aqua;padding-right:10px;font-size:12px">sec</p>
+    </div>
+    <div class="time" id="timer"></div>
+    <button onclick="timer_cd()" id="start" class="btn">Start</button>
+    <div class= "btn1">
+      <button onclick="reset()" id="restart">Reset</button>
+      <button onclick="pause()" id="pause">Pause</button>
+    </div>
+  </div>
+  <div>
+    <div class="container_stopwatch" id="cont_stopwatch">
+      <div class="time" id="stopwatch"></div>
+      <div class= "btn1">
+        <button onclick="s_start()" id="s_start_btn">Start</button>
+        <button onclick="s_lap()" id="s_lap_btn" disabled="true">Lap</button>
+      </div>
+    </div>
+    <div id="laps_cont">
+      <table id="laps"></table>
+    </div>
+  </div>
+<script src="assets/stopwatch.js"></script>  
+<script src="assets/timer.js"></script>
+</body>
+</html>
